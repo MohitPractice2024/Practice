@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day2</title>
+    <script>
+        function addition()
+        {
+            let num1 = document.getElementById("firstNumber").value;
+            let num2 = document.getElementById("secondNumber").value;
+            let sum = Number(num1) + Number(num2);
+            //console.log(sum);
+            document.getElementById("result").value = sum;
+        }
+        function difference()
+        {
+            let num1 = Number(document.getElementById("firstNumber").value);
+            let num2 = Number(document.getElementById("secondNumber").value);
+            let diff = null;
+            if(num1 > num2)
+                diff = num1 - num2;
+            else
+                diff = num2 - num1;
+            document.getElementById("result").value = diff;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <table align="center">
+            <tr>
+                <td>First Number:</td>
+                <td><input type="text" id="firstNumber" value=""></td>
+            </tr>
+            <tr>
+                <td>Second Number:</td>
+                <td><input type="text" id="secondNumber" value=""></td>
+            </tr>
+            <tr>
+                <td>Result:</td>
+                <td><input type="text" id="result" value=""></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="button" onclick="addition()">Sum</button></td>
+                <td><button type="button" onclick="difference()">Diff</button></td>
+            </tr>
+            
+        </table>
+    </form>
+</body>
+</html>
